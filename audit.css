@@ -1,0 +1,153 @@
+ body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Form container */
+    .container {
+      background: #fff;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      width: 350px;
+    }
+
+    /* Label styling */
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    /* Dropdown and inputs */
+    select,
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      transition: border-color 0.2s ease;
+    }
+
+    select:focus,
+    input[type="text"]:focus {
+      border-color: #6a5acd;
+      outline: none;
+    }
+
+    /* Spacing */
+    select,
+    input[type="text"] {
+      margin-bottom: 15px;
+    }
+
+    /* Button styling */
+    .button-add {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      border-radius: 12px;
+      background-color: green;
+      color: white;
+      border: none;
+      width: 70%;
+    }
+    .report {
+      display: grid;
+      width: 90%;
+      margin: 2rem auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      min-width: 768px;
+    }
+
+    /* Header and body share same grid structure */
+    .main-col,
+    .body-col {
+      display: grid;
+      grid-template-columns: repeat(
+        8,
+        1fr
+      ); /* 6 columns (Item, Opening, Additions, Closing, Sold, Amount) */
+      align-items: center;
+      text-align: center;
+      padding: 0.8rem 0;
+    }
+
+    /* Header row styling */
+    .main-col {
+      background: #004aad;
+      color: #fff;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Body rows */
+    .body-col {
+      border-top: 1px solid #ddd;
+      transition: background-color 0.2s ease;
+    }
+
+    .body-col:hover {
+      background-color: #f5f8ff;
+    }
+
+    /* Spacing for each cell */
+    .main-col span,
+    .body-col span {
+      padding: 0.5rem 0;
+    }
+
+    /* Add button styling */
+    .button-add {
+      display: block;
+      width: 70%;
+      margin: 1rem auto;
+      background: green;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-add:hover {
+      background-color: #007a2e;
+    }
+    .delete-btn {
+      background: none;
+      border: none;
+      color: #d9534f;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    /* Hover effects */
+    .delete-btn:hover {
+      color: #b02a26;
+      transform: scale(1.2);
+    }
+
+    /* Optional subtle hover for rows */
+    .body-wrapper:hover {
+      background-color: #f8faff;
+      transition: background-color 0.2s ease;
+    }
+  </style>
