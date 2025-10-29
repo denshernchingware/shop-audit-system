@@ -1,79 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="audit.css">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    />
-
-    <title>Audit System</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Audit System</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="login.css" />
 </head>
 <body>
-    <div class="container">
-      <label for="item">Choose item name:</label>
-      <select name="item" id="item" class="js-item">
-        <option value=""></option>
-        <option value="Rice">Rice</option>
-        <option value="Bread">Bread</option>
-        <option value="Biscuits">Biscuits</option>
-        <option value="Tea Bags">Tea Bags</option>
-        <option value="Sugar">Sugar</option>
-        <option value="Milk">Milk</option>
-        <option value="Flour">Flour</option>
-        <option value="Cooking Oil">Cooking Oil</option>
-        <option value="Rice">Rice</option>
-        <option value="Bread">Bread</option>
-        <option value="Biscuits">Biscuits</option>
-        <option value="Bottled Water">Bottled Water</option>
-        <option value="Soft Drinks">Soft Drinks</option>
-        <option value="Juice">Juice</option>
-        <option value="Salt">Salt</option>
-        <option value="Soap">Soap</option>
-        <option value="Toothpaste">Toothpaste</option>
-        <option value="Detergent">Detergent</option>
-        <option value="Tissues">Tissues</option></select
-      ><br /><br />
-
-      <label for="item">Opening Stock</label>
-      <input type="text" class="js-openingStock" /><br /><br />
-
-      <label for="item">Additions</label>
-      <input type="text" class="js-adds" /><br /><br />
-
-      <label for="item">Closing stock</label>
-      <input type="text" class="js-clStock" /><br /><br />
-
-      <label for="item">Unit Price</label>
-      <input type="text" class="js-unitPrice" /><br /><br />
-
-      <button onclick="Displayitems()" class="button-add">add</button>
-    </div>
-
-    <div class="report">
-      <div class="main-col">
-        <span>Item Name</span>
-        <span>Opening</span>
-        <span>Additions</span>
-        <span>Closing</span>
-        <span>Sold</span>
-        <span>Unit Price</span>
-        <span>Amount</span>
-        <span
-          style="
-            background-color: red;
-            height: 135%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          "
-          >Delete</span
-        >
+   
+  <div class="login-wrapper">
+    <div class="login-card">
+      <!-- Left Image Section -->
+      <div class="login-left">
+        <img src="https://www.uptrendlabs.com/wp-content/uploads/2023/04/blog-main-new-21.jpg"
+             alt="Audit System Banner" />
       </div>
-      <div class="js-report"></div>
+
+      <!-- Right Login Form Section -->
+      <div class="login-right">
+        <div class="login-header">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Audit_icon.svg/120px-Audit_icon.svg.png" alt="logo">
+          <h2>Audit System</h2>
+        </div>
+
+        <form class="login-form">
+          <h3>Login</h3>
+
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter Username" required />
+
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter Password" required />
+
+          <div class="form-links">
+            <a href="#">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="btn-login">Login</button>
+
+          <p class="no-account">Don’t have an account? <a href="#">Sign up</a></p>
+        </form>
+      </div>
     </div>
-    <script src="audit.js"></script>
+  </div>
 </body>
 </html>

@@ -1,153 +1,430 @@
- body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f6f9;
-      color: #222;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+/* 🟦 Top Bar */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #4a00e0 0%, #8e2de2 100%);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
 
-    /* Form container */
-    .container {
-      background: #fff;
-      padding: 2rem 3rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      width: 350px;
-    }
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-    /* Label styling */
-    label {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 6px;
-      color: #333;
-    }
+.logo {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background: #fff;
+}
 
-    /* Dropdown and inputs */
-    select,
-    input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 0.95rem;
-      transition: border-color 0.2s ease;
-    }
+.company-name {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
 
-    select:focus,
-    input[type="text"]:focus {
-      border-color: #6a5acd;
-      outline: none;
-    }
+.top-icons i {
+  margin-left: 20px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
 
-    /* Spacing */
-    select,
-    input[type="text"] {
-      margin-bottom: 15px;
-    }
+.top-icons i:hover {
+  transform: scale(1.1);
+}
 
-    /* Button styling */
-    .button-add {
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 10px;
-      border-radius: 12px;
-      background-color: green;
-      color: white;
-      border: none;
-      width: 70%;
-    }
-    .report {
-      display: grid;
-      width: 90%;
-      margin: 2rem auto;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      overflow: hidden;
-      background: #fff;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      min-width: 768px;
-    }
+/* 🟪 Sidebar */
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  height: calc(100% - 60px);
+  width: 230px;
+  background: #fff;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  padding-top: 1rem;
+  z-index: 5;
+}
 
-    /* Header and body share same grid structure */
-    .main-col,
-    .body-col {
-      display: grid;
-      grid-template-columns: repeat(
-        8,
-        1fr
-      ); /* 6 columns (Item, Opening, Additions, Closing, Sold, Amount) */
-      align-items: center;
-      text-align: center;
-      padding: 0.8rem 0;
-    }
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-    /* Header row styling */
-    .main-col {
-      background: #004aad;
-      color: #fff;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
+.sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s;
+}
 
-    /* Body rows */
-    .body-col {
-      border-top: 1px solid #ddd;
-      transition: background-color 0.2s ease;
-    }
+.sidebar li:hover {
+  background-color: #f0f0ff;
+}
 
-    .body-col:hover {
-      background-color: #f5f8ff;
-    }
+.sidebar i {
+  font-size: 18px;
+  color: #4a00e0;
+}
 
-    /* Spacing for each cell */
-    .main-col span,
-    .body-col span {
-      padding: 0.5rem 0;
-    }
+/* 🟧 Page Heading */
+.page-heading {
+  margin-top: 70px;
+  margin-left: 250px;
+  margin-bottom: 1rem;
+}
 
-    /* Add button styling */
-    .button-add {
-      display: block;
-      width: 70%;
-      margin: 1rem auto;
-      background: green;
-      color: #fff;
-      padding: 10px;
-      border: none;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+.page-heading h6 {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 600;
+}
 
-    .button-add:hover {
-      background-color: #007a2e;
-    }
-    .delete-btn {
-      background: none;
-      border: none;
-      color: #d9534f;
-      cursor: pointer;
-      font-size: 1.2rem;
-      transition: transform 0.2s ease, color 0.2s ease;
-    }
+/* 🟨 Main Container shift when sidebar present */
+.major-container {
+  margin-left: 250px;
+  margin-top: 20px;
+}
 
-    /* Hover effects */
-    .delete-btn:hover {
-      color: #b02a26;
-      transform: scale(1.2);
-    }
+/* 🔻 Bottom Navigation (Mobile) */
+.bottom-nav {
+  display: none;
+}
 
-    /* Optional subtle hover for rows */
-    .body-wrapper:hover {
-      background-color: #f8faff;
-      transition: background-color 0.2s ease;
-    }
-  </style>
+/* 🟩 Responsive Layout */
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+
+  .major-container,
+  .page-heading {
+    margin-left: 0;
+  }
+
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    justify-content: space-around;
+    padding: 0.7rem 0;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+  }
+
+  .bottom-nav i {
+    color: #4a00e0;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+
+  body {
+    padding-bottom: 60px; /* space for bottom nav */
+  }
+}
+
+
+/* Layout Containers */
+.major-container {
+  display: flex;
+  column-gap: 2rem;
+  
+}
+
+.container,
+.cash-form-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 450px;
+}
+
+/* Label styling */
+label,
+.cash-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Inputs and Selects */
+select,
+input[type="text"],
+.cash-form input[type="text"],
+.cash-form input[type="number"],
+.cash-form input[type="file"] {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f3;
+  color: #333;
+  font-size: 15px;
+  width: 80%;
+  margin-bottom: 25px;
+}
+
+select:focus,
+input[type="text"]:focus {
+  border-color: #6a5acd;
+  outline: none;
+}
+
+.cash-form input[type="file"] {
+  background-color: #e8e8e8;
+  cursor: pointer;
+}
+
+/* Buttons (Add + Submit) */
+.button-add,
+.submit-btn {
+  width: 100%;
+  background: linear-gradient(90deg, #8e2de2 0%, #4a00e0 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.button-add:hover,
+.submit-btn:hover {
+  transform: scale(1.03);
+  background: linear-gradient(90deg, #4a00e0 0%, #8e2de2 100%);
+}
+
+/* Headings */
+.cash-form-container h2,
+.stock-entry {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+/* Cash form groups */
+.cash-form .form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Report section */
+.report {
+  display: grid;
+  width: 70%;
+  margin: 2rem auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-left:380px;
+ // min-width: 768px;
+}
+
+/* Header and body share same grid structure */
+.main-col,
+.body-col {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  align-items: center;
+  text-align: center;
+  padding: 0.8rem 0;
+}
+
+/* Header row styling */
+.main-col {
+  background: linear-gradient(90deg, #8e2de2 0%, #4a00e0 100%);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Body rows */
+.body-col {
+  border-top: 1px solid #ddd;
+  transition: background-color 0.2s ease;
+}
+
+.body-col:hover {
+  background-color: #f5f8ff;
+}
+
+/* Spacing for each cell */
+.main-col span,
+.body-col span {
+  padding: 0.5rem 0;
+}
+
+/* Delete button */
+.delete-btn {
+  background: none;
+  border: none;
+  color: #d9534f;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.delete-btn:hover {
+  color: #b02a26;
+  transform: scale(1.2);
+}
+
+/* Optional subtle hover for rows */
+.body-wrapper:hover {
+  background-color: #f8faff;
+  transition: background-color 0.2s ease;
+}
+
+
+/* 🌐 Base styles remain the same above */
+/* Base stays same */
+
+/* Responsive Report Table */
+@media (max-width: 768px) {
+  .report {
+    width: 90%;
+    min-width: unset;
+    overflow-x: auto;
+    display: block;
+    border-radius: 12px;
+     margin:30px auto;
+  }
+
+  .main-col,
+  .body-col {
+    min-width: 700px; /* keeps structure but allows scroll */
+    grid-template-columns: repeat(8, minmax(100px, 1fr));
+  }
+
+  .report::-webkit-scrollbar {
+    height: 8px;
+  }
+  .report::-webkit-scrollbar-thumb {
+    background: #8e2de2;
+    border-radius: 4px;
+  }
+}
+
+
+/* 📱 Responsive adjustments */
+@media (max-width: 1024px) {
+  .major-container {
+    column-gap: 1.5rem;
+  }
+
+  .cash-form-container,
+  .container {
+    max-width: 400px;
+    padding: 25px 30px;
+  }
+
+  .cash-form-container h2,
+  .stock-entry {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .major-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+   
+  }
+
+  .cash-form-container,
+  .container {
+    width: 80%;
+    max-width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+     margin:0 auto;
+  }
+
+  .cash-form-container h2,
+  .stock-entry {
+    font-size: 1.4rem;
+  }
+
+  select,
+  input[type="text"],
+  input[type="number"],
+  input[type="file"] {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cash-form-container,
+  .container {
+    padding: 20px;
+    border-radius: 15px;
+    margin:0 auto;
+  }
+
+  .cash-form-container h2,
+  .stock-entry {
+    font-size: 1.3rem;
+  }
+
+  .button-add,
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  select,
+  input[type="text"],
+  input[type="number"],
+  input[type="file"] {
+    padding: 8px 10px;
+    font-size: 13.5px;
+  }
+}
