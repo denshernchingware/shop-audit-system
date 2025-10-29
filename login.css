@@ -119,21 +119,23 @@ body {
 .form-links a:hover {
   text-decoration: underline;
 }
-
 .btn-login {
   width: 100%;
   padding: 0.8rem;
-  background-color: #4a00e0;
-  color: white;
+  background: linear-gradient(90deg, #8e2de2 0%, #4a00e0 100%);
+  color: #fff;
   font-weight: 600;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease;
+  text-align: center;
+  font-size: 1rem;
 }
 
 .btn-login:hover {
-  background-color: #3c00b8;
+  transform: scale(1.03);
+  background: linear-gradient(90deg, #4a00e0 0%, #8e2de2 100%);
 }
 
 .no-account {
