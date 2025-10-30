@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="audit summary.css">
+    <link rel="stylesheet" href="audit.css">
+     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>Document</title>
+</head>
+<body>
+     <!-- 🔷 Top Navigation Bar -->
+  <header class="top-bar">
+    <div class="logo-section">
+      <img src="https://site-441002.mozfiles.com/files/441002/medium/Audit-Accounting-Bookkeeping-F.jpg" class="logo" />
+      <span class="company-name">AuditPro Systems</span>
+    </div>
+    <div class="top-icons">
+        
+      <i class="fa-solid fa-user-circle"></i>
+      <i class="fa-solid fa-bars"></i>
+      
+    </div>
+  </header>
+
+  <!-- 🔹 Sidebar (Desktop) -->
+  <aside class="sidebar">
+    <ul>
+      <li><i class="fa-solid fa-gauge"></i> <span>Dashboard</span></li>
+      <li><i class="fa-solid fa-file-alt"></i> <span>Compile Report</span></li>
+      <li><i class="fa-solid fa-chart-pie"></i> <span>Summary</span></li>
+      <li><i class="fa-solid fa-user"></i> <span>Profile</span></li>
+      <li><i class="fa-solid fa-gear"></i> <span>Settings</span></li>
+    </ul>
+  </aside>
+
+  
+    <section class="summary-cards">
+  <h2>Audit Summary Overview</h2>
+  <div class="cards-container">
+    <div class="card">
+      <i class="fa-solid fa-money-bill-wave icon"></i>
+      <h3>Cash in Hand</h3>
+      <p>$4,250</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-building-columns icon"></i>
+      <h3>Banked Amount</h3>
+      <p>$3,800</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-boxes-stacked icon"></i>
+      <h3>Item Categories</h3>
+      <p>18</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-scale-balanced icon"></i>
+      <h3>Difference</h3>
+      <p>$450</p>
+    </div>
+  </div>
+</section>
+
+
+    <div class="report">
+    <div class="main-col">
+      <span>Item Name</span>
+      <span>Opening</span>
+      <span>Additions</span>
+      <span>Closing</span>
+      <span>Sold</span>
+      <span>Unit Price</span>
+      <span>Amount</span>
+      <span style="background-color: rgb(173, 8, 8); height: 135%; display: flex; justify-content: center; align-items: center;">Delete</span>
+    </div>
+    <div class="js-report"></div>
+  </div>
+
+
+
+    <section class="audit-summary">
+  <h2>Audit Summary</h2>
+  <div class="summary-grid">
+    <div class="summary-item">
+      <span class="label">Opening Stock</span>
+      <span class="value">$2,450</span>
+    </div>
+    <div class="summary-item">
+      <span class="label">Additions</span>
+      <span class="value">$1,200</span>
+    </div>
+    <div class="summary-item">
+      <span class="label">Closing Stock</span>
+      <span class="value">$1,800</span>
+    </div>
+    <div class="summary-item">
+      <span class="label">Goods Sold</span>
+      <span class="value">$1,850</span>
+    </div>
+    <div class="summary-item">
+      <span class="label">Total Revenue</span>
+      <span class="value">$3,100</span>
+    </div>
+    <div class="summary-item">
+      <span class="label">Net Profit</span>
+      <span class="value">$1,250</span>
+    </div>
+   
+  </div>
+</section>
+
+
+  <!-- 🔻 Bottom Navigation (Mobile) -->
+  <nav class="bottom-nav">
+    <i class="fa-solid fa-gauge"></i>
+    <i class="fa-solid fa-file-alt"></i>
+    <i class="fa-solid fa-chart-pie"></i>
+    <i class="fa-solid fa-user"></i>
+    <i class="fa-solid fa-gear"></i>
+  </nav>
+
+<script src="audit summary.js"></script>
+<script src="audit.js"></script>
+</body>
+</html>

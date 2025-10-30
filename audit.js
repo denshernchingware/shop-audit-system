@@ -1,4 +1,6 @@
-let report = [];
+// ✅ Initialize or load from localStorage
+let report = JSON.parse(localStorage.getItem("report")) || [];
+
 function Displayitems() {
   const item = document.querySelector(".js-item");
   const stock = document.querySelector(".js-openingStock");
@@ -6,58 +8,93 @@ function Displayitems() {
   const adds = document.querySelector(".js-adds");
   const unitPrice = document.querySelector(".js-unitPrice");
 
-  let itemName = item.value;
+  let itemName = item.value.trim();
   let openingStock = stock.value.trim();
   let closingStock = stockEnd.value.trim();
   let additions = adds.value.trim();
   let pricePerUnit = unitPrice.value.trim();
 
-  report.push({
-    itemName,
-    openingStock,
-    additions,
-    closingStock,
-    pricePerUnit,
-  });
-  console.log(report);
-  renderDisplay();
-}
-
-function renderDisplay() {
-  let html = "";
-  for (let i = 0; i < report.length; i++) {
-    let os = Number(`${report[i].openingStock}`);
-    let adds = Number(`${report[i].additions}`);
-    let cs = Number(`${report[i].closingStock}`);
-    let up = Number(`${report[i].pricePerUnit}`);
-
-    let sold = 0;
-
-    sold = os + adds - cs;
-    console.log(sold);
-
-    let amount = "";
-    amount = sold * up;
-    console.log(amount);
-
-    html += `
- 
-    <div class="body-col">
-      <span>${report[i].itemName}</span>
-      <span>${report[i].openingStock}</span>
-      <span>${report[i].additions}</span>
-      <span>${report[i].closingStock}</span>
-      <span>${sold}</span>
-      <span>$${report[i].pricePerUnit}</span>
-      <span>$ ${amount}</span>
-      <span 
-      onclick="report.splice(${i}, 1); renderDisplay();"
-      class="delete-btn"
-    ><i class="fa-solid fa-trash"></i></span>
-    </div>
-    
-  </div>
-  `;
+  // Validate inputs
+  if (
+    !itemName ||
+    !openingStock ||
+    !closingStock ||
+    !additions ||
+    !pricePerUnit
+  ) {
+    Swal.fire({
+      title: "Missing Fields!",
+      text: "⚠️ Please fill in all fields before submitting.",
+      icon: "error",
+      background: "#111827",
+      color: "#f3f4f6",
+      confirmButtonColor: "#2563eb",
+    });
+    return;
   }
-  document.querySelector(".js-report").innerHTML = html;
+
+  // 🧾 Confirmation with custom styling
+  Swal.fire({
+    title: "Confirm Details",
+    html: `
+      <div style="text-align:left; font-size:14px;">
+        <p><b>Item Name:</b> ${itemName}</p>
+        <p><b>Opening Stock:</b> ${openingStock}</p>
+        <p><b>Additions:</b> ${additions}</p>
+        <p><b>Closing Stock:</b> ${closingStock}</p>
+        <p><b>Unit Price:</b> ${pricePerUnit}</p>
+      </div>
+      <p style="margin-top:10px;">Do you want to <b>submit</b> these details?</p>
+    `,
+    icon: "question",
+    showCancelButton: true,
+    confirmButtonText: "Submit",
+    cancelButtonText: "Edit",
+    background: "#111827",
+    color: "#f3f4f6",
+    confirmButtonColor: "#2563eb",
+    cancelButtonColor: "#6b7280",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // Save data
+      report.push({
+        itemName,
+        openingStock,
+        additions,
+        closingStock,
+        pricePerUnit,
+      });
+
+      localStorage.setItem("report", JSON.stringify(report));
+
+      // 🎉 Success popup
+      Swal.fire({
+        title: "Item Added!",
+        text: "✅ Item successfully added to the Audit Report page!",
+        icon: "success",
+        timer: 2000,
+        showConfirmButton: false,
+        background: "#111827",
+        color: "#f3f4f6",
+      });
+
+      // Clear inputs
+      item.value = "";
+      stock.value = "";
+      stockEnd.value = "";
+      adds.value = "";
+      unitPrice.value = "";
+    } else {
+      // Edit message
+      Swal.fire({
+        title: "Edit Mode",
+        text: "You can edit your details and try again.",
+        icon: "info",
+        timer: 1500,
+        showConfirmButton: false,
+        background: "#111827",
+        color: "#f3f4f6",
+      });
+    }
+  });
 }

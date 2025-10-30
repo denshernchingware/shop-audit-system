@@ -9,12 +9,14 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
   />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 <body>
   <!-- 🔷 Top Navigation Bar -->
   <header class="top-bar">
     <div class="logo-section">
-      <img src="logo.png" alt="Company Logo" class="logo" />
+      <img src="https://site-441002.mozfiles.com/files/441002/medium/Audit-Accounting-Bookkeeping-F.jpg" class="logo" />
       <span class="company-name">AuditPro Systems</span>
     </div>
     <div class="top-icons">
@@ -36,11 +38,12 @@
 
   <!-- 🔸 Page Heading -->
   <section class="page-heading">
-    <h6>Dashboard</h6>
+    <h2>Compile Report</h2>
   </section>
 
   <!-- 🔹 Main Content -->
   <div class="major-container">
+    
     <div class="cash-form-container">
       <h2>Cash Summary</h2>
       <form class="cash-form">
@@ -107,22 +110,11 @@
         <button type="button" onclick="Displayitems()" class="button-add">Add</button>
       </form>
     </div>
+     
   </div>
-
-  <!-- 🔹 Report Section -->
-  <div class="report">
-    <div class="main-col">
-      <span>Item Name</span>
-      <span>Opening</span>
-      <span>Additions</span>
-      <span>Closing</span>
-      <span>Sold</span>
-      <span>Unit Price</span>
-      <span>Amount</span>
-      <span style="background-color: rgb(173, 8, 8); height: 135%; display: flex; justify-content: center; align-items: center;">Delete</span>
-    </div>
-    <div class="js-report"></div>
-  </div>
+  <a href="audit summary.html" style="width:20%; margin-top:30px;margin-left: 200px;">
+    <button  class="button-add"  >View Report</button>
+  </a>
 
   <!-- 🔻 Bottom Navigation (Mobile) -->
   <nav class="bottom-nav">
@@ -132,7 +124,11 @@
     <i class="fa-solid fa-user"></i>
     <i class="fa-solid fa-gear"></i>
   </nav>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
   <script src="audit.js"></script>
+  
+
 </body>
 </html>
