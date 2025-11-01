@@ -1,54 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login | Audit System</title>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-  />
-  <link rel="stylesheet" href="login.css" />
-</head>
-<body>
-   
-  <div class="login-wrapper">
-    <div class="login-card">
-      <!-- Left Image Section -->
-      <div class="login-left">
-        <img src="https://www.uptrendlabs.com/wp-content/uploads/2023/04/blog-main-new-21.jpg"
-             alt="Audit System Banner" />
-      </div>
-
-      <!-- Right Login Form Section -->
-      <div class="login-right">
-        <div class="login-header">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Audit_icon.svg/120px-Audit_icon.svg.png" alt="logo">
-          <h2>Audit System</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Audit System</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="login-wrapper">
+      <div class="login-card">
+        <!-- Left Image Section -->
+        <div class="login-left">
+          <img
+            src="https://www.uptrendlabs.com/wp-content/uploads/2023/04/blog-main-new-21.jpg"
+            alt="Audit System Banner"
+          />
         </div>
 
-        <form class="login-form">
-          <h3>Login</h3>
-
-          <label for="username">Username</label>
-          <input type="text" id="username" placeholder="Enter Username" required />
-
-          <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter Password" required />
-
-          <div class="form-links">
-            <a href="#">Forgot Password?</a>
+        <!-- Right Login Form Section -->
+        <div class="login-right">
+          <div class="login-header">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Audit_icon.svg/120px-Audit_icon.svg.png"
+              alt="logo"
+            />
+            <h2>Audit System</h2>
           </div>
 
-         <button type="button" class="btn-login" onclick="window.location.href='audit 01.html'">
-  Login
-</button>
+          <form class="login-form">
+            <h3>Login</h3>
 
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter Username"
+              required
+            />
 
-          <p class="no-account">Don’t have an account? <a href="#">Sign up</a></p>
-        </form>
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter Password"
+              required
+            />
+
+            <div class="form-links">
+              <a href="#">Forgot Password?</a>
+            </div>
+
+            <button
+              type="button"
+              class="btn-login"
+              onclick="window.location.href='/audit-receipts/audit01.html'"
+            >
+              Login
+            </button>
+
+            <p class="no-account">
+              Don’t have an account? <a href="#">Sign up</a>
+            </p>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
