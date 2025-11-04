@@ -1,140 +1,180 @@
-/* General Styles */
+:root {
+  --primary-color: linear-gradient(90deg, #4a00e0 0%, #8e2de2 100%);
+  --bg-color: #f4f6f9;
+  --card-color: #1b2330;
+  --text-color: #222;
+  --muted-color: #9ca3af;
+}
+
 body {
+  margin: 0 !important;
+  padding: 0 !important;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f6f9;
-  color: #222;
-  margin: 0;
-  padding: 2rem;
-}
-
-/* Dashboard Header */
-.header {
+  background-color: var(--bg-color);
+  color: var(--text-color);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
 }
 
-h1 {
-  font-size: 2.5rem;
-  color: #222;
-}
-
-.btn-new {
-  background: linear-gradient(90deg, #4a00e0, #8e2de2);
-  border: none;
-  color: #fff;
-  font-weight: bold;
-  padding: 0.8rem 1.5rem;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: opacity 0.3s;
-}
-
-.btn-new:hover {
-  opacity: 0.85;
-}
-
-/* Financial Summary Section */
-.financial-summary {
-  margin-bottom: 2rem;
-}
-
-.financial-summary h2 {
-  color: #222;
-  margin-bottom: 1rem;
-}
-
-.cards {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.card {
-  background-color: #1b1f2a;
-  border-radius: 10px;
-  padding: 1.5rem;
+/* Main content */
+main {
+  padding-left: 20rem;
+  padding-right: 20rem;
   flex: 1;
-  min-width: 250px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main h1 {
+  margin-bottom: 0;
+}
+main h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 
-.card .title {
-  color: #aaa;
-  margin-bottom: 0.5rem;
-}
-
-.card h3 {
-  font-size: 1.5rem;
-  color: #fff;
-}
-
-.change {
-  display: inline-block;
-  font-weight: 600;
-  margin-top: 0.5rem;
-}
-
-.change.up {
-  color: #00d46a;
-}
-
-.change.down {
-  color: #ff5252;
-}
-
-/* Recent Audits Table */
-.recent-audits h2 {
-  color: #222;
-  margin-bottom: 1rem;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #1b1f2a;
+.audit-card {
+  display: flex;
+  align-items: center;
+  background-color: var(--card-color);
   border-radius: 10px;
-  overflow-x: auto;
+  padding: 15px;
+  margin-bottom: 12px;
+  width: 100%;
 }
 
-thead {
-  background-color: #232836;
-  color: #aaa;
+.audit-icon {
+  background-color: #2a3440;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-right: 15px;
 }
 
-th,
-td {
-  padding: 1rem;
-  text-align: left;
+.audit-details {
+  flex: 1;
 }
 
-tbody tr {
-  border-bottom: 1px solid #2d3143;
+.audit-details p {
+  margin: 0;
+  font-weight: 500;
+  color: white;
 }
 
-tbody tr:last-child {
-  border-bottom: none;
-}
-
-/* Status badges */
 .status {
-  padding: 0.4rem 1rem;
-  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: rgb(103, 209, 103);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status.completed .status-dot {
+  background-color: #4ade80;
+}
+
+.audit-date {
+  font-size: 13px;
+  color: var(--muted-color);
+}
+
+/* Add Button */
+.add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 15px 25px;
   font-weight: 600;
-  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(156, 39, 176, 0.3);
+  transition: background 0.3s ease;
 }
 
-.status.completed {
-  background-color: #00d46a;
+.add-btn:hover {
+  background-color: #7b1fa2;
 }
 
-.status.progress {
-  background-color: #ffb400;
+.add-btn .material-symbols-outlined {
+  font-size: 22px;
+  margin-right: 8px;
 }
 
 @media (max-width: 480px) {
-  .header {
-    display: block;
+  /* Main content */
+  main {
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 1rem;
+
+    width: 80%;
+  }
+
+  .audit-card {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .audit-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .audit-details p {
+    font-size: 15px;
+  }
+
+  .status {
+    gap: 3px;
+    font-size: 10px;
+  }
+
+  .status-dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  .status.completed .status-dot {
+    background-color: #4ade80;
+  }
+
+  .audit-date {
+    font-size: 8px;
+  }
+
+  /* Add Button */
+  .add-btn {
+    border-radius: 0.5rem;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 3px auto;
+  }
+  h2 {
+    margin: 0;
   }
 }
