@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stitch Design Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="audit.css" />
+
+    <style>
+      :root {
+        --primary-color: linear-gradient(90deg, #4a00e0 0%, #8e2de2 100%);
+        --bg-color: #f4f6f9;
+        --card-color: #1b2330;
+        --text-color: #222;
+        --muted-color: #9ca3af;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+      }
+
+      /* Main content */
+      main {
+        padding-left: 20rem;
+        padding-right: 20rem;
+        flex: 1;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      main h1 {
+        margin-bottom: 0;
+      }
+      main h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+
+      .audit-card {
+        display: flex;
+        align-items: center;
+        background-color: var(--card-color);
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 12px;
+        width: 100%;
+      }
+
+      .audit-icon {
+        background-color: #2a3440;
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        margin-right: 15px;
+      }
+
+      .audit-details {
+        flex: 1;
+      }
+
+      .audit-details p {
+        margin: 0;
+        font-weight: 500;
+        color: white;
+      }
+
+      .status {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 14px;
+        color: rgb(103, 209, 103);
+      }
+
+      .status-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+      }
+
+      .status.completed .status-dot {
+        background-color: #4ade80;
+      }
+
+      .audit-date {
+        font-size: 13px;
+        color: var(--muted-color);
+      }
+
+      /* Add Button */
+      .add-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 15px 25px;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 20px auto;
+        box-shadow: 0 4px 10px rgba(156, 39, 176, 0.3);
+        transition: background 0.3s ease;
+      }
+
+      .add-btn:hover {
+        background-color: #7b1fa2;
+      }
+
+      .add-btn .material-symbols-outlined {
+        font-size: 22px;
+        margin-right: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 🔷 Top Navigation Bar -->
+    <header class="top-bar">
+      <div class="logo-section">
+        <img
+          src="https://site-441002.mozfiles.com/files/441002/medium/Audit-Accounting-Bookkeeping-F.jpg"
+          class="logo"
+        />
+        <span class="company-name">AuditPro Systems</span>
+      </div>
+      <div class="top-icons">
+        <i class="fa-solid fa-user-circle"></i>
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </header>
+    <!-- 🔹 Sidebar (Desktop) -->
+    <aside class="sidebar">
+      <ul>
+        <li><i class="fa-solid fa-gauge"></i> <span>Dashboard</span></li>
+        <li>
+          <i class="fa-solid fa-file-alt"></i> <span>Compile Report</span>
+        </li>
+        <li><i class="fa-solid fa-chart-pie"></i> <span>Summary</span></li>
+        <li><i class="fa-solid fa-user"></i> <span>Profile</span></li>
+        <li><i class="fa-solid fa-gear"></i> <span>Settings</span></li>
+      </ul>
+    </aside>
+    <main>
+      <h1 style="text-align: center">Dashboard</h1>
+      <h2>Past Audits</h2>
+
+      <div class="audit-card">
+        <div class="audit-icon">
+          <span class="material-symbols-outlined">description</span>
+        </div>
+        <div class="audit-details">
+          <p>Audit Report 1</p>
+          <div class="status completed">
+            <div class="status-dot"></div>
+            <span>Completed</span>
+          </div>
+        </div>
+        <div class="audit-date">Jan 15, 2024</div>
+      </div>
+
+      <div class="audit-card">
+        <div class="audit-icon">
+          <span class="material-symbols-outlined">description</span>
+        </div>
+        <div class="audit-details">
+          <p>Audit Report 2</p>
+          <div class="status completed">
+            <div class="status-dot"></div>
+            <span>Completed</span>
+          </div>
+        </div>
+        <div class="audit-date">Jan 20, 2024</div>
+      </div>
+
+      <div class="audit-card">
+        <div class="audit-icon">
+          <span class="material-symbols-outlined">description</span>
+        </div>
+        <div class="audit-details">
+          <p>Audit Report 3</p>
+          <div class="status completed">
+            <div class="status-dot"></div>
+            <span>Completed</span>
+          </div>
+        </div>
+        <div class="audit-date">Jan 25, 2024</div>
+      </div>
+
+      <button class="add-btn">
+        <span class="material-symbols-outlined">add</span
+        ><a
+          href="audit-receipts/audit01.html"
+          style="text-decoration: none; color: white"
+          >New Audit</a
+        >
+      </button>
+    </main>
+  </body>
+</html>

@@ -9,7 +9,7 @@ body {
   min-height: 100vh;
 }
 /* 🟦 Top Bar */
-.top-bar {
+/* .top-bar {
   position: fixed;
   top: 0;
   left: 0;
@@ -22,9 +22,9 @@ body {
   padding: 0.7rem 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   z-index: 10;
-}
+} */
 
-.logo-section {
+/* .logo-section {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -35,7 +35,6 @@ body {
   width: 35px;
   border-radius: 20%;
   background: #fff;
-  
 }
 
 .company-name {
@@ -52,14 +51,14 @@ body {
 
 .top-icons i:hover {
   transform: scale(1.1);
-}
+} */
 
 /* 🟪 Sidebar */
 .sidebar {
   position: fixed;
-  top: 60px;
+  top: 0;
   left: 0;
-  height: calc(100% - 60px);
+  height: 100%; /* height: calc(100% - 60px); */
   width: 230px;
   background: #fff;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
@@ -96,8 +95,7 @@ body {
 
 /* 🟧 Page Heading */
 
-
-.page-heading h2 {   
+.page-heading h2 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   background: linear-gradient(90deg, #4a00e0, #8e2de2);
@@ -105,7 +103,6 @@ body {
   -webkit-text-fill-color: transparent;
   letter-spacing: 1px;
 }
-
 
 /* 🟨 Main Container shift when sidebar present */
 .major-container {
@@ -153,12 +150,10 @@ body {
   }
 }
 
-
 /* Layout Containers */
 .major-container {
   display: flex;
   column-gap: 2rem;
-  
 }
 
 .container,
@@ -245,13 +240,8 @@ input[type="text"]:focus {
   flex-direction: column;
 }
 
-
-
 /* 🌐 Base styles remain the same above */
 /* Base stays same */
-
-
-
 
 /* 📱 Responsive adjustments */
 @media (max-width: 1024px) {
@@ -280,7 +270,6 @@ input[type="text"]:focus {
     flex-direction: column;
     align-items: stretch;
     gap: 2rem;
-   
   }
 
   .cash-form-container,
@@ -289,7 +278,7 @@ input[type="text"]:focus {
     max-width: 100%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     padding: 25px;
-     margin:0 auto;
+    margin: 0 auto;
   }
 
   .cash-form-container h2,
@@ -310,7 +299,7 @@ input[type="text"]:focus {
   .container {
     padding: 20px;
     border-radius: 15px;
-    margin:0 auto;
+    margin: 0 auto;
   }
 
   .cash-form-container h2,

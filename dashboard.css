@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  color: #222;
+  margin: 0;
+  padding: 2rem;
+}
+
+/* Dashboard Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #222;
+}
+
+.btn-new {
+  background: linear-gradient(90deg, #4a00e0, #8e2de2);
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.btn-new:hover {
+  opacity: 0.85;
+}
+
+/* Financial Summary Section */
+.financial-summary {
+  margin-bottom: 2rem;
+}
+
+.financial-summary h2 {
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.cards {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #1b1f2a;
+  border-radius: 10px;
+  padding: 1.5rem;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.card .title {
+  color: #aaa;
+  margin-bottom: 0.5rem;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.change {
+  display: inline-block;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.change.up {
+  color: #00d46a;
+}
+
+.change.down {
+  color: #ff5252;
+}
+
+/* Recent Audits Table */
+.recent-audits h2 {
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1b1f2a;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+thead {
+  background-color: #232836;
+  color: #aaa;
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: left;
+}
+
+tbody tr {
+  border-bottom: 1px solid #2d3143;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Status badges */
+.status {
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.status.completed {
+  background-color: #00d46a;
+}
+
+.status.progress {
+  background-color: #ffb400;
+}
+
+@media (max-width: 480px) {
+  .header {
+    display: block;
+  }
+}

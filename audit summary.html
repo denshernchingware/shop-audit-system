@@ -15,7 +15,7 @@
   </head>
   <body>
     <!-- 🔷 Top Navigation Bar -->
-    <header class="top-bar">
+    <!-- <header class="top-bar">
       <div class="logo-section">
         <img
           src="https://site-441002.mozfiles.com/files/441002/medium/Audit-Accounting-Bookkeeping-F.jpg"
@@ -27,7 +27,7 @@
         <i class="fa-solid fa-user-circle"></i>
         <i class="fa-solid fa-bars"></i>
       </div>
-    </header>
+    </header> -->
 
     <!-- 🔹 Sidebar (Desktop) -->
     <aside class="sidebar">
@@ -41,96 +41,114 @@
         <li><i class="fa-solid fa-gear"></i> <span>Settings</span></li>
       </ul>
     </aside>
+    <main class="main-section" style="margin-top: 1.5rem">
+      <section class="summary-cards">
+        <h2>Audit Summary Overview</h2>
+        <div class="cards-container">
+          <div class="card">
+            <i class="fa-solid fa-money-bill-wave icon"></i>
+            <h3>Cash in Hand</h3>
+            <p>$4,250</p>
+          </div>
 
-    <section class="summary-cards">
-      <h2>Audit Summary Overview</h2>
-      <div class="cards-container">
-        <div class="card">
-          <i class="fa-solid fa-money-bill-wave icon"></i>
-          <h3>Cash in Hand</h3>
-          <p>$4,250</p>
-        </div>
+          <div class="card">
+            <i class="fa-solid fa-building-columns icon"></i>
+            <h3>Banked Amount</h3>
+            <p>$3,800</p>
+          </div>
 
-        <div class="card">
-          <i class="fa-solid fa-building-columns icon"></i>
-          <h3>Banked Amount</h3>
-          <p>$3,800</p>
-        </div>
+          <div class="card">
+            <i class="fa-solid fa-boxes-stacked icon"></i>
+            <h3>Item Categories</h3>
+            <p>18</p>
+          </div>
 
-        <div class="card">
-          <i class="fa-solid fa-boxes-stacked icon"></i>
-          <h3>Item Categories</h3>
-          <p>18</p>
+          <div class="card">
+            <i class="fa-solid fa-scale-balanced icon"></i>
+            <h3>Difference</h3>
+            <p>$450</p>
+          </div>
         </div>
+      </section>
 
-        <div class="card">
-          <i class="fa-solid fa-scale-balanced icon"></i>
-          <h3>Difference</h3>
-          <p>$450</p>
-        </div>
-      </div>
-    </section>
-
-    <div class="report">
-      <div class="main-col">
-        <span>Item Name</span>
-        <span>Opening</span>
-        <span>Additions</span>
-        <span>Closing</span>
-        <span>Sold</span>
-        <span>Unit Price</span>
-        <span>Amount</span>
-        <span
-          style="
-            background-color: rgb(173, 8, 8);
-            height: 135%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          "
-          >Delete</span
-        >
-      </div>
-      <div class="js-report"></div>
-    </div>
-
-    <section class="audit-summary js-audit-summary">
-      <h2>Audit Summary</h2>
-      <div class="summary-grid">
-        <div class="summary-item">
-          <span class="label">Cash in hand b/d</span>
-          <span class="value">$2,450</span>
-        </div>
-        <div class="summary-item">
-          <span class="label"><strong>Add</strong> Total sold</span>
-          <span class="value">$1,200</span>
-        </div>
-        <div class="summary-item total">
-          <span class="label"><strong>Grand total expected</strong></span>
-          <span class="value"><strong>$1800</strong></span>
-        </div>
-        <div class="summary-item">
-          <span class="label" style="margin-top: 30px">Cash in hand b/d</span>
-          <span class="value" style="margin-top: 30px">$1,850</span>
-        </div>
-        <div class="summary-item">
-          <span class="label"><strong>Add </strong>Banked</span>
-          <span class="value">$3,100</span>
-        </div>
-        <div class="summary-item">
-          <span class="label"><strong>Total Cash Balance</strong></span>
-          <span class="value"><strong>$ 1200</strong></span>
-        </div>
-        <div class="summary-item">
-          <span class="label" style="margin-top: 30px"
-            ><strong>Difference</strong></span
-          >
-          <span class="value" style="margin-top: 30px"
-            ><strong>$ 1200</strong></span
+      <div class="report">
+        <div class="main-col">
+          <span>Item Name</span>
+          <span>Opening</span>
+          <span>Additions</span>
+          <span>Closing</span>
+          <span>Sold</span>
+          <span>Unit Price</span>
+          <span>Amount</span>
+          <span
+            style="
+              background-color: rgb(173, 8, 8);
+              height: 135%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+            >Delete</span
           >
         </div>
+        <div class="js-report"></div>
       </div>
-    </section>
+
+      <section class="audit-summary js-audit-summary">
+        <h2>Audit Summary</h2>
+        <div class="summary-grid">
+          <div class="summary-item">
+            <span class="label">Cash in hand b/d</span>
+            <span class="value">$2,450</span>
+          </div>
+          <div class="summary-item">
+            <span class="label"><strong>Add</strong> Total sold</span>
+            <span class="value">$1,200</span>
+          </div>
+          <div class="summary-item total">
+            <span class="label"><strong>Grand total expected</strong></span>
+            <span class="value"><strong>$1800</strong></span>
+          </div>
+          <div class="summary-item">
+            <span class="label" style="margin-top: 30px">Cash in hand b/d</span>
+            <span class="value" style="margin-top: 30px">$1,850</span>
+          </div>
+          <div class="summary-item">
+            <span class="label"><strong>Add </strong>Banked</span>
+            <span class="value">$3,100</span>
+          </div>
+          <div class="summary-item">
+            <span class="label"><strong>Total Cash Balance</strong></span>
+            <span class="value"><strong>$ 1200</strong></span>
+          </div>
+          <div class="summary-item">
+            <span class="label" style="margin-top: 30px"
+              ><strong>Difference</strong></span
+            >
+            <span class="value" style="margin-top: 30px"
+              ><strong>$ 1200</strong></span
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <button
+      id="downloadPDF"
+      style="
+        background: linear-gradient(90deg, #4a00e0 0%, #8e2de2 100%);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 15px;
+        font-size: 16px;
+        font-weight: 600;
+      "
+    >
+      <i class="fa-solid fa-file-pdf" style="margin-right: 8px"></i>
+      Download Report as PDF
+    </button>
 
     <!-- 🔻 Bottom Navigation (Mobile) -->
     <nav class="bottom-nav">
@@ -140,6 +158,12 @@
       <i class="fa-solid fa-user"></i>
       <i class="fa-solid fa-gear"></i>
     </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="audit summary.js"></script>
+
     <script src="audit-receipts/audit01.js"></script>
     <script src="audit summary.js"></script>
     <script src="audit.js"></script>

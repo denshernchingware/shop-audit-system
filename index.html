@@ -3,67 +3,151 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login | Audit System</title>
+    <title>Shop Audit Welcome</title>
+
+    <!-- Google Fonts -->
     <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="login.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* ===== General Styles ===== */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f6f9;
+        color: #222;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      /* ===== Container ===== */
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem;
+        max-width: 600px;
+      }
+      .icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /* ===== Icon ===== */
+      .icon {
+        background-color: #9281b442;
+        color: #4a00e0;
+        border-radius: 0.75rem;
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      .material-symbols-outlined {
+        font-size: 2rem;
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+
+      /* ===== Heading & Text ===== */
+      h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        line-height: 1.3;
+      }
+
+      p {
+        color: #1a1e24;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+      }
+
+      /* ===== Buttons ===== */
+      .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+
+      button {
+        border: none;
+        border-radius: 0.5rem;
+        height: 3rem;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-primary {
+        background: linear-gradient(90deg, #4a00e0 0%, #8e2de2 100%);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: #d3252d;
+      }
+
+      .btn-secondary {
+        background-color: rgba(255, 255, 255, 0.1);
+        border: #1a1e24 solid;
+      }
+
+      .btn-secondary:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      /* ===== Responsive ===== */
+      @media (min-width: 768px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+    </style>
   </head>
+
   <body>
-    <div class="login-wrapper">
-      <div class="login-card">
-        <!-- Left Image Section -->
-        <div class="login-left">
-          <img
-            src="https://www.uptrendlabs.com/wp-content/uploads/2023/04/blog-main-new-21.jpg"
-            alt="Audit System Banner"
-          />
+    <div class="container">
+      <div class="content">
+        <div class="icon-container">
+          <div class="icon">
+            <span class="material-symbols-outlined">inventory_2</span>
+          </div>
         </div>
 
-        <!-- Right Login Form Section -->
-        <div class="login-right">
-          <div class="login-header">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Audit_icon.svg/120px-Audit_icon.svg.png"
-              alt="logo"
-            />
-            <h2>Audit System</h2>
-          </div>
+        <h1>Effortless Audits, Total Control.</h1>
+        <p>
+          Streamline your shop's inventory and cash management with precise,
+          easy-to-conduct audits.
+        </p>
 
-          <form class="login-form">
-            <h3>Login</h3>
-
-            <label for="username">Username</label>
-            <input
-              type="text"
-              id="username"
-              placeholder="Enter Username"
-              required
-            />
-
-            <label for="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              placeholder="Enter Password"
-              required
-            />
-
-            <div class="form-links">
-              <a href="#">Forgot Password?</a>
-            </div>
-
-            <button type="button" class="btn-login">
-              <a href="audit-receipts/audit01.html" style="color: white"
-                >Login</a
-              >
-            </button>
-
-            <p class="no-account">
-              Don’t have an account? <a href="#">Sign up</a>
-            </p>
-          </form>
+        <div class="buttons">
+          <button class="btn-primary">Start New Audit</button>
+          <button class="btn-secondary">
+            <a href="dashboard.html" style="text-decoration: none"
+              >View Recent Audits</a
+            >
+          </button>
         </div>
       </div>
     </div>

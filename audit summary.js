@@ -133,3 +133,55 @@ function deleteItem(index) {
     }
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("downloadPDF");
+
+  if (!btn) return;
+
+  btn.addEventListener("click", async () => {
+    const mainSection = document.querySelector(".main-section");
+    if (!mainSection) {
+      alert("Main section not found!");
+      return;
+    }
+
+    // Load jsPDF
+    const { jsPDF } = window.jspdf;
+
+    // Capture the main section only
+    const canvas = await html2canvas(mainSection, {
+      scale: 2,
+      useCORS: true,
+      logging: false,
+    });
+
+    const imgData = canvas.toDataURL("image/png");
+
+    // Setup PDF
+    const pdf = new jsPDF("p", "mm", "a4");
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = pdf.internal.pageSize.getHeight();
+
+    const imgWidth = pdfWidth;
+    const imgHeight = (canvas.height * pdfWidth) / canvas.width;
+
+    let heightLeft = imgHeight;
+    let position = 0;
+
+    // Add first page
+    pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+    heightLeft -= pdfHeight;
+
+    // Add extra pages if content is long
+    while (heightLeft > 0) {
+      position = heightLeft - imgHeight;
+      pdf.addPage();
+      pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+      heightLeft -= pdfHeight;
+    }
+
+    // Save PDF
+    pdf.save("Audit_Report.pdf");
+  });
+});
