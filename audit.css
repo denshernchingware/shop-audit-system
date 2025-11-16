@@ -4,54 +4,10 @@ body {
   color: #222;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   min-height: 100vh;
 }
-/* 🟦 Top Bar */
-/* .top-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: linear-gradient(90deg, #4a00e0 0%, #8e2de2 100%);
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.7rem 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  z-index: 10;
-} */
-
-/* .logo-section {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo {
-  height: 35px;
-  width: 35px;
-  border-radius: 20%;
-  background: #fff;
-}
-
-.company-name {
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-
-.top-icons i {
-  margin-left: 20px;
-  font-size: 1.4rem;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.top-icons i:hover {
-  transform: scale(1.1);
-} */
 
 /* 🟪 Sidebar */
 .sidebar {
@@ -239,6 +195,15 @@ input[type="text"]:focus {
   display: flex;
   flex-direction: column;
 }
+.view-btn {
+  margin-top: 20px;
+}
+.view-button:hover {
+  transform: scale(1.03);
+  background: linear-gradient(90deg, #4a00e0 0%, #8e2de2 100%);
+  color: white;
+  font: bold;
+}
 
 /* 🌐 Base styles remain the same above */
 /* Base stays same */
@@ -295,11 +260,29 @@ input[type="text"]:focus {
 }
 
 @media (max-width: 480px) {
+  body {
+    background-color: #2a3440;
+  }
+  .major-container {
+    margin-top: 0;
+    width: 100vw;
+  }
+  .page-heading h2 {
+    margin-top: 0;
+    background: white;
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  }
+
   .cash-form-container,
   .container {
-    padding: 20px;
+    padding: 10px;
     border-radius: 15px;
     margin: 0 auto;
+    box-shadow: none;
+    background-color: #1b2330;
+    color: #fff;
   }
 
   .cash-form-container h2,
@@ -317,11 +300,21 @@ input[type="text"]:focus {
     font-size: 14px;
   }
 
-  select,
   input[type="text"],
   input[type="number"],
   input[type="file"] {
     padding: 8px 10px;
     font-size: 13.5px;
+    width: 92%;
   }
+  select {
+    padding: 6px 10px;
+    width: 100%;
+    font-size: 13.5px;
+  }
+  .bottom-nav {
+    background-color: #2a3440;
+  }
+  .bottom-nav i {
+    color: #fff;
 }
