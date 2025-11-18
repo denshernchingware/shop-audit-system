@@ -1,4 +1,8 @@
-/* ---------- Base Styles (Your existing CSS) ---------- */
+body {
+  max-width: 100vw !important;
+  margin: 0 !important;
+  overflow-x: hidden;
+}
 .main-section {
   width: 80%;
 }
@@ -13,9 +17,10 @@
 .summary-cards h2 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
-  color: #222;
-  /* -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
+  background: linear-gradient(90deg, #8e2de2, #4a00e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.5px;
   letter-spacing: 1px;
 }
 
@@ -58,7 +63,7 @@
 
 /* ---------- Audit Summary ---------- */
 .audit-summary {
-  width: 100%;
+  width: 95%;
   max-width: 700px;
   margin: 4rem auto;
   background: #fff;
@@ -164,21 +169,28 @@
 }
 
 .pdf-btn {
-  background-color: #007bff;
+  background: linear-gradient(90deg, #4a00e0 0%, #8e2de2 100%);
   color: white;
   border: none;
-  padding: 10px 18px;
-  border-radius: 6px;
-  font-weight: 600;
+  padding: 14px 20px;
+  border-radius: 8px;
   cursor: pointer;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  font-weight: 600;
 }
 .pdf-btn:hover {
   background-color: #0056b3;
 }
 
-/* ---------- Responsive Queries ---------- */
-
 /* small laptops */
+@media (max-width: 1650px) {
+  .sidebar {
+    display: none;
+  }
+}
 @media (max-width: 1024px) {
   .cards-container {
     grid-template-columns: repeat(2, 1fr);
@@ -192,13 +204,29 @@
     width: 85%;
     margin-left: auto;
     margin-right: auto;
+    display: block;
+    overflow-x: auto;
+  }
+  .report::-webkit-scrollbar {
+    height: 8px;
+  }
+  .report::-webkit-scrollbar-thumb {
+    background: #8e2de2;
+    border-radius: 4px;
   }
 }
 /* Mobile devices */
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
+  body {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    width: 100%;
+  }
+
   .cards-container {
     grid-template-columns: 1fr;
     gap: 1rem;
+    margin: 0;
   }
 
   .card {
@@ -213,11 +241,6 @@
     padding: 1rem;
   }
 
-  .summary-grid {
-    grid-template-columns: 1fr;
-    text-align: left;
-  }
-
   .report {
     width: 95%;
     margin: 1.5rem auto;
@@ -228,15 +251,30 @@
 
   .main-col,
   .body-col {
-    min-width: 700px;
+    min-width: 800px;
     grid-template-columns: repeat(8, minmax(80px, 1fr));
   }
-
-  .report::-webkit-scrollbar {
-    height: 8px;
+}
+@media (max-width: 480px) {
+  .audit-summary h2 {
+    font-size: 20px;
   }
-  .report::-webkit-scrollbar-thumb {
-    background: #8e2de2;
-    border-radius: 4px;
+  .summary-cards h2 {
+    background: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .card {
+    background-color: #1b2330;
+    h3 {
+      color: #9ca3af;
+    }
+    p {
+      color: #fff;
+    }
+  }
+
+  .audit-summary {
+    margin: 2rem auto;
   }
 }

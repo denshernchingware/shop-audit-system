@@ -9,12 +9,12 @@ body {
   min-height: 100vh;
 }
 
-/* 🟪 Sidebar */
+
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%; /* height: calc(100% - 60px); */
+  height: 100%; 
   width: 230px;
   background: #fff;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
@@ -49,7 +49,7 @@ body {
   color: #4a00e0;
 }
 
-/* 🟧 Page Heading */
+
 
 .page-heading h2 {
   font-size: 1.8rem;
@@ -60,18 +60,17 @@ body {
   letter-spacing: 1px;
 }
 
-/* 🟨 Main Container shift when sidebar present */
+
 .major-container {
   margin-left: 250px;
   margin-top: 20px;
 }
 
-/* 🔻 Bottom Navigation (Mobile) */
 .bottom-nav {
   display: none;
 }
 
-/* 🟩 Responsive Layout */
+
 @media (max-width: 1024px) {
   .sidebar {
     display: none;
@@ -102,11 +101,11 @@ body {
   }
 
   body {
-    padding-bottom: 60px; /* space for bottom nav */
+    padding-bottom: 60px; 
   }
 }
 
-/* Layout Containers */
+
 .major-container {
   display: flex;
   column-gap: 2rem;
@@ -124,14 +123,13 @@ body {
   max-width: 450px;
 }
 
-/* Label styling */
+
 label,
 .cash-form label {
   font-weight: 600;
   margin-bottom: 6px;
 }
 
-/* Inputs and Selects */
 select,
 input[type="text"],
 .cash-form input[type="text"],
@@ -159,7 +157,7 @@ input[type="text"]:focus {
   cursor: pointer;
 }
 
-/* Buttons (Add + Submit) */
+
 .button-add,
 .submit-btn {
   width: 100%;
@@ -180,7 +178,7 @@ input[type="text"]:focus {
   background: linear-gradient(90deg, #4a00e0 0%, #8e2de2 100%);
 }
 
-/* Headings */
+
 .cash-form-container h2,
 .stock-entry {
   text-align: center;
@@ -189,26 +187,19 @@ input[type="text"]:focus {
   letter-spacing: 1px;
 }
 
-/* Cash form groups */
+
 .cash-form .form-group {
   margin-bottom: 18px;
   display: flex;
   flex-direction: column;
 }
-.view-btn {
-  margin-top: 20px;
-}
-.view-button:hover {
-  transform: scale(1.03);
-  background: linear-gradient(90deg, #4a00e0 0%, #8e2de2 100%);
-  color: white;
-  font: bold;
-}
 
-/* 🌐 Base styles remain the same above */
-/* Base stays same */
 
-/* 📱 Responsive adjustments */
+@media (max-width: 1402px) {
+  .sidebar {
+    display: none;
+  }
+}
 @media (max-width: 1024px) {
   .major-container {
     column-gap: 1.5rem;
